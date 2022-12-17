@@ -6,9 +6,9 @@ VALUES
 
 INSERT INTO properties (owner_id, title, description, thumbnail_photo_url, cover_photo_url, cost_per_night, parking_spaces, number_of_bathrooms, number_of_bedrooms, country, street, city, province, post_code, active)
 VALUES
-(1, 'Normandy SR-2', 'Commanders Quarters', 'https://i.imgur.com/qq91mkO.png', 'https://i.imgur.com/mwhb0Mp.png', 500, 1, 1, 1, 'Canada', '97 Alliance Military Hanger Highway', 'Vancouver', 'British Columbia', 'V3H 9V7', true),
-(2, 'Nos Astra', 'Penthouse Suite', 'https://i.imgur.com/IezPSFk.jpg', 'https://i.imgur.com/pLG5FsJ.jpg', 2500, 4, 3, 3, 'Illium', '245-9 Vista Elle Quarter', 'Nos Astra', 'Mesa Gen', 'I1N 2M3', true),
-(3, 'Tiberius Towers', 'Tiberius Towers Apartment Suite', 'https://i.imgur.com/6iuyHcl.png', 'https://i.imgur.com/ZS73o7M.png', 1750, 2, 2, 5, 'Citadel', '165-1 Tiberius Towers Lane', 'Silversun Strip', 'Citadel', 'C2S 9T7', true);
+(1, 'Normandy SR-2', 'Commanders Quarters', 'https://i.imgur.com/qq91mkO.png', 'https://i.imgur.com/mwhb0Mp.png', 500000, 1, 1, 1, 'Canada', '97 Alliance Military Hanger Highway', 'Vancouver', 'British Columbia', 'V3H 9V7', true),
+(2, 'Nos Astra', 'Penthouse Suite', 'https://i.imgur.com/IezPSFk.jpg', 'https://i.imgur.com/pLG5FsJ.jpg', 2500000, 4, 3, 3, 'Illium', '245-9 Vista Elle Quarter', 'Nos Astra', 'Mesa Gen', 'I1N 2M3', true),
+(3, 'Tiberius Towers', 'Tiberius Towers Apartment Suite', 'https://i.imgur.com/6iuyHcl.png', 'https://i.imgur.com/ZS73o7M.png', 1750000, 2, 2, 5, 'Citadel', '165-1 Tiberius Towers Lane', 'Silversun Strip', 'Citadel', 'C2S 9T7', true);
 
 INSERT INTO reservations (start_date, end_date, property_id, guest_id)
 VALUES
