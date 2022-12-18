@@ -2,7 +2,7 @@ $(() => {
 
   const $signUpForm = $(`
   <form id="sign-up-form" class="sign-up-form">
-        <p>Sign Up</p>
+        <p class="sign-up">Sign Up</p>
 
         <div class="sign-up-form__field-wrapper">
             <input type="text" name="name" placeholder="Username">
