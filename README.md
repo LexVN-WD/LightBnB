@@ -87,3 +87,20 @@ Using a provided respository as practice code, students are expected to design a
   * `apiRoutes.js` and `userRoutes.js` are responsible for any HTTP requests to `/users/something` or `/api/something`. 
   * `json` is a directory that contains a bunch of dummy data in `.json` files.
   * `database.js` is responsible for all queries to the database. It doesn't currently connect to any database, all it does is return data from `.json` files.
+
+# Mass Effect References To Try
+
+## **Commander Shepards Cabin Aboard the SR2-Normandy Docked in Vancouver Alliance Dock**
+### *Want to know what its like to sleep like a war-hero? Well now you can! Book Shepards cabin today. The slight buzzing of the SR2-Normandy's engine will lull you to sleep. We guarantee that this will be your favorite cabin on the Normandy!*
+- You can find this by searching by city *Vancouver* 
+!["normandy"](/docs/normandy.png)
+
+## **Liara T'soni's Nos Astra Apartment on Illium**
+### *Book a visit to Liara's lavish apartment in Nos Astra, located on the planet Illium! The spacious area and backlight aquarium are sure to satisfy those with high-end needs.*
+- You can find this by searching by city *Nos Astra* 
+!["illium"](/docs/illium.jpg)
+
+## **Captain Anderson's Penthouse Suite on the Citadel**
+### *Looking for a large open suite where you and all your closest companions can throw a major party after fighting a evil clone of yourself? You've come to the right place! This decked out pad comes with a waterfall wall and massive indoor fireplace that is sure to keep any party-goers interested.*
+- You can find this by searching by city *Citadel* 
+!["citadel"](/docs/citadel.png)
