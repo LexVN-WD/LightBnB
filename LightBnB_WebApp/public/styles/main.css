@@ -1,23 +1,30 @@
 .property-listings {
   width: 100%;
   display: flex;
+  padding-top: 5rem;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  height: 100%;
+}
+
 
 .property-listing {
+  background-color: #3076ca;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
   margin: 20px 0;
+  gap: 20px;
   width: 100%;
   max-width: 600px;
-  height: 200px;
-  border: 1px solid black;
+  height: 300px;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: stretch;
   align-content: stretch; }
   .property-listing__title {
-    font-size: 1.0rem; }
+    font-size: 1.5rem;
+    font-family: 'EB Garamond', serif;
+   }
   .property-listing__preview-image {
     overflow: hidden;
     max-width: 50%; }
@@ -26,34 +33,145 @@
       height: 100%;
       padding: 0; }
 
+.property-listing__details {
+  padding: 0 1rem 0 1rem;
+  font-family: 'EB Garamond', serif;
+}
+
+
 @media screen and (max-width: 400px) {
   .property-listing {
     flex-direction: column;
     height: 400px; } }
+    
+
+/* SIGN UP Custom CSS */
 .search-property-form, .login-form, .new-property-form, .sign-up-form {
   max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  margin: auto; }
-  .search-property-form__field-wrapper, .login-form__field-wrapper, .new-property-form__field-wrapper, .sign-up-form__field-wrapper {
-    width: 100%;
-    display: flex; }
-  .search-property-form label, .login-form label, .new-property-form label, .sign-up-form label {
-    display: none; }
-  .search-property-form textarea, .search-property-form select, .search-property-form input, .search-property-form label, .login-form textarea, .login-form select, .login-form input, .login-form label, .new-property-form textarea, .new-property-form select, .new-property-form input, .new-property-form label, .sign-up-form textarea, .sign-up-form select, .sign-up-form input, .sign-up-form label {
-    margin: 5px 5px;
-    width: 100%; }
+  margin: auto;
+  height: 100%;
+  padding-top: 5rem; }
 
+.sign-up {
+  color: black;
+  margin: 10px 5px 10px 5px;
+  font-family: 'EB Garamond', serif;
+  font-size: xx-large;
+  font-weight: 700;
+}
+
+.login {
+  color: black;
+  margin: 10px 5px 10px 5px;
+  font-family: 'EB Garamond', serif;
+  font-size: xx-large;
+  font-weight: 700;
+}
+
+.search-property-form__field-wrapper, .login-form__field-wrapper, .new-property-form__field-wrapper, .sign-up-form__field-wrapper {
+  width: 100%;
+  display: flex;
+  margin: 5px;
+  gap: 10px;
+}
+
+.search {
+  color: black;
+  margin: 10px 5px 10px 5px;
+  font-family: 'EB Garamond', serif;
+  font-size: xx-large;
+  font-weight: 700;
+}
+
+button {
+  color: black;
+  background-color: white;
+  font-family: 'EB Garamond', serif;
+  font-size: large;
+  font-weight: 700;
+}
+
+.cancel {
+  color: black;
+  background-color: white;
+  font-family: 'EB Garamond', serif;
+  font-size: large;
+  font-weight: 700;
+}
+
+.search-property-form label, .login-form label, .new-property-form label, .sign-up-form label {
+  display: none;
+}
+
+.search-property-form textarea, .search-property-form select, .search-property-form input, .search-property-form label, .login-form textarea, .login-form select, .login-form input, .login-form label, .new-property-form textarea, .new-property-form select, .new-property-form input, .new-property-form label, .sign-up-form textarea, .sign-up-form select, .sign-up-form input, .sign-up-form label {
+  margin: 5px 5px;
+  font-family: 'EB Garamond', serif;
+  width: 100%;
+}
+
+/* Custom Header CSS */
 .page-header__user-links ul {
   list-style: none;
-  display: flex; }
-  .page-header__user-links ul li {
-    padding: 0;
-    margin: 0 10px;
-    cursor: pointer; }
+  display: flex;
+  background-color: #2f5391;
+  
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  position: fixed;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  width: 100vw;
+ }
+
+ .page-header__user-links ul li {
+  padding: 0;
+  margin: 0 10px;
+  cursor: pointer;
+  color: white;
+  font-family: 'EB Garamond', serif;
+}
+
+.project-name {
+  color: white;
+  margin: 0 10px;
+  font-family: 'EB Garamond', serif;
+  font-size: xx-large;
+}
+
+.slogan {
+  color: #83bdd8;
+  margin: 0 10px;
+  font-family: 'EB Garamond', serif;
+  font-size: small;
+}
+
+.user-id {
+  font-weight: 700;
+}
+
 
 .hidden {
-  display: none; }
+  display: none;
+}
+
+body {
+  display: block;
+  margin: 0;
+  background-color: #3076ca;
+  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  height: 100%;
+}
+
+.user-id {
+  font-weight: 700;
+}
+
+
 
 /*# sourceMappingURL=main.css.map */
