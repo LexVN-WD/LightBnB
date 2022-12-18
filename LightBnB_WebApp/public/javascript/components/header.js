@@ -11,25 +11,29 @@ $(() => {
     if (!user) {
       userLinks = `
       <nav id="page-header__user-links" class="page-header__user-links">
-        <ul>
-          <li class="home">🏠</li>
-          <li class="search_button">Search</li>
-          <li class="login_button">Log In</li>
-          <li class="sign-up_button">Sign Up</li>
-        </ul>
+          <ul>
+            <span class="project-name">LightBnB</span>
+            <span class="slogan">Find your dream destination!</span>
+            <li class="home">🏠 Home</i></li>
+            <li class="search_button">🔍 Search</li>
+            <li class="login_button">👤 Log In</li>
+            <li class="sign-up_button">📃 Sign Up</li>
+          </ul>
       </nav>
       `
     } else {
       userLinks = `
       <nav id="page-header__user-links" class="page-header__user-links">
         <ul>
-          <li class="home">🏠</li>
-          <li class="search_button">Search</li>
-          <li>${user.name}</li>
-          <li class="create_listing_button">Create Listing</li>
-          <li class="my_listing_button">My Listings</li>
-          <li class="my_reservations_button">My Reservations</li>
-          <li class="logout_button">Log Out</li>
+          <span class="project-name">LightBnB</span>
+          <span class="slogan">Find your dream destination!</span>
+          <li class="home">🏠 Home</li>
+          <li class="search_button">🔍 Search</li>
+          <li class="user-id">👤 ${user.name}</li>
+          <li class="create_listing_button">📝 Create Listing</li>
+          <li class="my_listing_button">📓 My Listings</li>
+          <li class="my_reservations_button">📆 My Reservations</li>
+          <li class="logout_button">⛔ Log Out</li>
         </ul>
       </nav>
       `
