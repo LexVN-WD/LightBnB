@@ -106,7 +106,6 @@ const getAllReservations = function (guest_id, limit = 10) {
   FROM properties 
   JOIN reservations ON properties.id = reservations.property_id
   JOIN property_reviews ON properties.id = property_reviews.property_id
-  JOIN users ON reservations.guest_id = users.id
   WHERE reservations.guest_id = $1
   GROUP BY reservations.id, properties.id
   ORDER BY start_date ASC
@@ -136,59 +135,45 @@ exports.getAllReservations = getAllReservations;
  */
 // getAllProperties
 const getAllProperties = (options, limit = 10) => {
+  
   const queryParams = [];
 
   let queryString = `      
-  SELECT properties.*, avg(property_reviews.rating) as average_rating
+  SELECT properties.*, AVG(property_reviews.rating) as average_rating
   FROM properties
   JOIN property_reviews ON properties.id = property_id
   `;
 
   // PARAMETER LOOKUP BY CITY NAME
   if (options.city) {
-    queryParams.push(`%${options.city}%`);
-    if (queryParams.length > 1) {
-      queryString += ` AND city LIKE $${queryParams.length}`;
-    } else {
-      queryString += ` WHERE city LIKE $${queryParams.length}`;
-    }
+    queryParams.push(`%${options.city.slice(1)}%`);
+    queryString += `WHERE city LIKE $${queryParams.length} `;
   }
 
   // PARAMETER LOOKUP BY OWNER ID LOGIN
   if (options.owner_id) {
-    queryParams.push(options.owner_id);
-    queryString += ` WHERE properties.owner_id = $${queryParams.length}`;
+    queryParams.push(`${options.owner_id}`);
+    queryString += `WHERE properties.owner_id = $${queryParams.length} `;
   }
 
   // PARAMETER LOOKUP BY MINPRICE AND MAXPRICE
   const min = options.minimum_price_per_night;
   const max = options.maximum_price_per_night;
 
+  // Filter properties by Min price
   if (min) {
     let minPrice = Number(min) * 100;
     queryParams.push(`${minPrice}`);
-
-    if (queryParams.length === 1) {
-      queryString += `WHERE cost_per_night >= $${queryParams.length} `;
-    } else if (queryParams.length === 2) {
-      queryString += `AND cost_per_night >= $${queryParams.length} `;
-    }
+    queryString += `AND cost_per_night >= $${queryParams.length}`;
   }
 
+  // Filter properties by Max price
   if (max) {
     let maxPrice = Number(max) * 100;
     queryParams.push(`${maxPrice}`);
-
-    if (queryParams.length === 1) {
-      queryString += `
-      WHERE cost_per_night <= $${queryParams.length} 
-      `;
-    } else if (queryParams.length === 2) {
-      queryString += `
-      AND cost_per_night <= $${queryParams.length} 
-      `;
-    }
+    queryString += `AND cost_per_night <= $${queryParams.length} `;
   }
+
 
   // Filter properties by rating
   queryString += `
